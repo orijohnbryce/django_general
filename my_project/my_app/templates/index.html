@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ג'אנגו</title>
+</head>
+<body>
+    <button>  Hello Button </button>
+    <script src="{% static 'js.js' %}"></script>
+
+
+    <img id="img_id" src="{% static '1.jpg' %}"
+         alt="image not showed" srcset="" onclick="changeImage()">
+
+
+
+    <br>
+    <a href="{% url 'class' %}"> link </a>
+    <br>
+    <a href="class"> link2 </a>
+    <br>
+
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+
+    {% if name %}
+    <input placeholder="{{name}}"/>
+    {% else %}
+    <p> No Name </p>
+    {% endif %}
+
+</body>
+</html>
